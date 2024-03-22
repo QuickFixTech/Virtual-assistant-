@@ -1,0 +1,404 @@
+#include<iostream>
+
+#include<windows.h>
+
+#include<stdio.h>
+
+#include<string.h>
+
+#include<ctime>
+
+
+
+using namespace std;
+
+void wish(){
+
+    time_t now=time(0);
+
+    tm *time = localtime(&now);
+
+    if(time->tm_hour<12){
+
+        cout<<"GOOD MORNING"<<endl<<endl;
+
+        string phrase="good morning 🌞";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+    else if(time->tm_hour>12 && time->tm_hour<16){
+
+        cout<<"GOOD AFTERNOON"<<endl<<endl;
+
+        string phrase="good afternoon ";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+    else if(time->tm_hour>16 && time->tm_hour<24){
+
+        cout<<"GOOD EVENVING"<<endl<<endl;
+
+         string phrase="good evening 🌄";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+}
+
+void datetime(){
+
+    time_t now=time(0);
+
+    char *dt=ctime(&now);
+
+    cout<<"The Date and Time is"<<endl
+
+    <<dt<<endl;
+
+}
+
+
+
+void Remind(){
+
+    time_t now=time(0);
+
+    tm *time = localtime(&now);
+
+    if(time->tm_hour<7){
+
+        cout<<"Wake up"<<endl;
+
+        string phrase="It's Morning";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+    else if(time->tm_hour=10){
+
+        cout<<"College time"<<endl;
+
+        string phrase="It's college time ";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+    else if(time->tm_hour=17){
+
+        cout<<"gym time"<<endl;
+
+         string phrase="it's gym time";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+        else if(time->tm_hour=19){
+
+        cout<<"lunch time"<<endl;
+
+         string phrase="it's lunch time";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+        else if(time->tm_hour=20){
+
+        cout<<"Study time"<<endl;
+
+         string phrase="it's study time";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+        else if(time->tm_hour=22){
+
+        cout<<"sleep time"<<endl;
+
+         string phrase="it's sleeping time";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+        system(charcommand);
+
+    }
+
+}
+
+
+
+int main(){
+
+
+
+    system("cls");
+
+    cout<<"\t\t\t******************************************WELCOME***********************************";
+
+    cout<<"\n\t\t\t******************************************I AM VIRTUAL ASSISTANT********************";
+
+    cout<<"\n\t\t\t******************************************MY NAME IS SISIRA************************";
+
+    cout<<"\n\t\t\t******************************************I AM HERE TO HELP YOU*********************";
+
+    
+
+    char password[20];
+
+    char ch[100];
+
+    do{
+
+        cout<<"********************************"<<endl;
+
+        cout<<"ENTER THE PASSWORD"<<endl;
+
+        string phrase="Enter your password";
+
+        string command ="espeak \""+ phrase + "\"";
+
+        const char *charcommand = command.c_str();
+
+      system(charcommand);
+
+
+
+        gets(password);
+
+
+
+        STARTUPINFO startInfo={0};
+
+        PROCESS_INFORMATION processInfo={0};
+
+
+
+        if(strcmp(password,"sisi")==0){
+
+            cout<<"Correct Password"<<endl;
+
+            cout<<"\n***********************************************************************************\n\n";
+
+            wish();
+
+            Remind();
+
+            do{
+
+                cout<<"\n*******************************************************************************\n"<<endl;
+
+                cout<<"how can i help you"<<endl;
+
+                string phrase="how can i help you";
+
+                      string command ="espeak \""+ phrase + "\"";
+
+                      const char *charcommand = command.c_str();
+
+                      system(charcommand); 
+
+                cout<<"Your Query"<<endl;
+
+                gets(ch);
+
+                cout<<endl;
+
+                cout<<"Here is result of Your Query"<<endl;
+
+                if(strcmp(ch,"hi") == 0 || strcmp(ch,"hey") == 0 || strcmp(ch,"hello") == 0){
+
+                    cout<<"hello........... 😄"<<endl;
+
+                    string phrase="Hello";
+
+                    string command ="espeak \""+ phrase + "\"";
+
+                    const char *charcommand = command.c_str();
+
+                    system(charcommand);
+
+                }
+
+                else if(strcmp(ch,"bye")==0 || strcmp(ch,"stop")==0 || strcmp(ch,"exit")==0){
+
+                    cout<<"Good Bye, Have nice Day!!!!!!!!!!!..........."<<endl;
+
+                    exit(0);
+
+                }
+
+                else if(strcmp(ch,"who are you")==0 || strcmp(ch,"tell me about yourself")==0 || strcmp(ch,"about")==0){
+
+                    cout<<"I am Virtual Assistant Sisira"<<endl;
+
+                            string phrase="I am virtual Assistant Sisira";
+
+                            string command ="espeak \""+ phrase + "\"";
+
+                            const char *charcommand = command.c_str();
+
+                            system(charcommand);
+
+                }
+
+                else if(strcmp(ch,"how are you")==0 || strcmp(ch,"whatsup")==0 || strcmp(ch,"how is your day")==0){
+
+                            cout<<"I am good, Tell me how can I help You"<<endl;
+
+                            string phrase="I am good";
+
+                            string command ="espeak \""+ phrase + "\"";
+
+                            const char *charcommand = command.c_str();
+
+                            system(charcommand);
+
+                }
+
+                else if((ch,"time")==0 || strcmp(ch,"date")==0){
+
+                    datetime();
+
+                }
+
+                else if(strcmp(ch,"open notepad")==0){
+
+                    cout<<"opening notepad.........."<<endl;
+
+                    CreateProcess(TEXT("C:\\Windows\\notepad.exe"),NULL,NULL,NULL,FALSE,NULL,NULL,NULL,&startInfo,&processInfo);
+
+                }
+
+                else if(strcmp(ch,"open google")==0){
+
+                    cout<<"opening Google.........."<<endl;
+
+                    system("start https://www.google.com");
+
+                }
+
+                else if(strcmp(ch,"open youtube")==0){
+
+                    cout<<"opening Youtube.........."<<endl;
+
+                    system("start https://www.youtube.com");
+
+                }
+
+                else if(strcmp(ch,"open instagram")==0){
+
+                    cout<<"opening Youtube.........."<<endl;
+
+                    system("start https://www.instagram.com");
+
+                }
+
+                    else if(strcmp(ch,"play music")==0){
+
+                    cout<<"Here is showing Result..........."<<endl;
+
+                    system("start C:\Music");
+
+                }
+
+                    else if(strcmp(ch,"show me about your college")==0){
+
+                    cout<<"Here is showing Result..........."<<endl;
+
+                    system("start C:\college.txt");
+
+                }
+
+                    else if(strcmp(ch,"show me images of flowers")==0){
+
+                    cout<<"Here is showing Result..........."<<endl;
+
+                    system("start C:\Flower");
+
+                }
+
+                
+
+                else{
+
+                    cout<<"Sorry could not understand your Query Please Try again !!!"<<endl;
+
+                     string phrase="Sorry could not understand your Query Please Try again !!!";
+
+                     string command ="espeak \""+ phrase + "\"";
+
+                     const char *charcommand = command.c_str();
+
+                     system(charcommand);
+
+                }
+
+            }while(1);
+
+        }
+
+        else{
+
+             cout<<"Incorrect Password"<<endl;
+
+             string phrase="enter your password";
+
+             string command ="espeak \""+ phrase + "\"";
+
+             const char *charcommand = command.c_str();
+
+             system(charcommand);  
+
+        }
+
+    }while(1);
+
+
+
+    return 0;
+
+}
+
