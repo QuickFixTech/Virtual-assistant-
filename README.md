@@ -1,4 +1,12 @@
 # Assistant-
 This project content the virtual assistant code named as sisira
 
+    The Virtual Assistant Project, named "Sisira," is a command-line based application designed to assist users with various tasks and provide helpful information. This project leverages C++ programming language and integrates multiple functionalities to create an interactive and efficient virtual assistant The primary goal of the project is to develop a virtual assistant that can understand user commands and respond accordingly. Sisira incorporates features like voice recognition, text-to-speech conversion, and basic natural language processing to enhance user interaction. By utilizing the Espeak library, Sisira can vocalize responses, creating a more user-friendly experience. The project encompasses various functionalities to assist users in their day-to-day activities. It provides personalized greetings based on the time of day, offers reminders for specific events, and displays the current date and time. Sisira can also perform tasks such as opening applications like Notepad, accessing popular websites like Google, YouTube, and Instagram, playing music, and retrieving specific files or information based on user queries. To enhance the user experience, Sisira utilizes external libraries and system calls. It leverages the Windows API for process creation and management, enabling the assistant to launch applications seamlessly. Additionally, it uses the Ctime library to retrieve the current date and time information and display it to the user. Throughout the project development process, various programming concepts such as conditional statements, functions, string manipulation, and library integration were employed to implement the desired functionalities. The project's modular structure allows for easy maintenance and expansion of features in the future.
+
 https://youtu.be/-a3dfvNu-go?si=L0kLxqlz7iDFk8H1
+
+![IMG_20240717_075702](https://github.com/user-attachments/assets/38a620bb-26a7-454d-8ddc-db7ea9db8a6e)
+![IMG_20240717_075716](https://github.com/user-attachments/assets/ab91a25e-1cb4-43fb-b9f6-5a4fc36eca03)
+![IMG_20240717_075731](https://github.com/user-attachments/assets/50c4f886-1828-41ed-9bce-11794dd56ae8)
+![IMG_20240717_075749](https://github.com/user-attachments/assets/5db1ff0a-7560-42f0-a25d-b1654e710c3e)
+![IMG_20240717_075803](https://github.com/user-attachments/assets/26305e90-ba35-4644-93d7-3f79bb227eb6)
